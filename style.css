@@ -1,0 +1,54 @@
+/* Tampilan default (Aplikasi) */
+body {
+    background-color: #f4f7f6;
+}
+
+.print-area {
+    display: none; /* Sembunyikan area cetak di layar biasa */
+}
+
+/* Pengaturan khusus saat dicetak (Ctrl+P) */
+@media print {
+    .no-print {
+        display: none !important; /* Sembunyikan form dan tombol */
+    }
+    
+    .print-area {
+        display: block !important; /* Tampilkan kop surat dan surat tugas */
+        color: black;
+    }
+
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 2cm;
+    }
+
+    .kop-surat {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .kop-surat h3 {
+        margin: 0;
+        font-size: 18pt;
+        font-weight: bold;
+    }
+
+    .kop-surat p {
+        margin: 0;
+        font-size: 12pt;
+    }
+
+    .table-bordered th, .table-bordered td {
+        border: 1px solid black !important;
+        padding: 8px;
+    }
+
+    .signature {
+        margin-top: 50px;
+        float: right;
+        text-align: left;
+        width: 300px;
+    }
+}
